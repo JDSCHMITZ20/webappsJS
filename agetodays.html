@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="mystyles.css">
+    <meta charset="UTF-8" name="author" content="Josh Schmitz">
+    <title>about me: calculator</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="file:///C:/Users/s526395/Documents/44563/joshschmitz/index.html?#">About
+                    Me: Josh
+                    Schmitz</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-home">
+                            <a class="nav-link"
+                                href="file:///C:/Users/s526395/Documents/44563/joshschmitz/index.html?#">Home
+                                <!-- <span class="sr-only">(current)</span>--></a>
+                        </li>
+                        <li class="nav-contact">
+                            <a class="nav-link"
+                                href="file:///C:/Users/s526395/Documents/44563/joshschmitz/contact.html">Contact</a>
+                        </li>
+                        <li class="nav-age2day">
+                            <a class="nav-link"
+                                href="file:///C:/Users/s526395/Documents/44563/joshschmitz/agetodays.html">Age
+                                to Days</a>
+                        </li>
+                    </ul>
+                    <!-- SEARCH BOX, SEEMS USELESS AND UGLY
+                            <form class="form-inline mt-2 mt-md-0">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        -->
+                </div>
+        </div>
+    </div>
+    <main>
+        <h2>Age To Days</h2>
+        <p>Enter in your age and receive that how many days it takes to reach that age</p>
+        <label for="age">Enter your age</label>
+        <input id="age" type="number" class="form-control" value="0" required autofocus>
+        <br>
+        <button id="calcButton">Submit Age</button>
+        <br>
+        <p id="result">Age: 0 Days: 0</p>
+        <br>
+        <div id="ajax">
+            <p>Change</p>
+            <button type="button" onclick="loadDoc()">Change Text</button>
+        </div>
+    </main>
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    document.getElementById("ajax").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax_res.txt", true);
+        }
+    </script>
+
+    <script src="scripts/joshschmitz.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <hr>
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/joshua-schmitz-885591149/"> <img id="icon"
+                        src="pictures/linkedin icon.png" alt="LinkedIn icon" height="50px" width="50px"></a></li>
+            <li><a href="https://github.com/JDSCHMITZ20"><img id="icon" src="pictures/github icon.png" alt="GitHub icon"
+                        height="50px" width="50px"></a></li>
+        </ul>
+        &copy; 2019 Josh Schmitz
+    </footer>
+</body>
+
+</html>

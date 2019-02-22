@@ -1,0 +1,68 @@
+ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+ul#classes li {
+    font-size: 100%;
+}
+
+img#profilepic{
+    height:150px;
+    width: 250px; 
+    
+}
+
+img#floridabeach {
+    height: 15%;
+    width: 15%;
+    transform: rotate(270deg);
+    border: 0;
+}
+
+.item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
+
+
+        .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: grey;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: gray;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+li.nav-home{
+    border-style: solid;
+    background-color: white;
+}
+
+li.nav-contact{
+    border-style: solid;
+    background-color: white;
+}
+
+li.nav-age2day{
+    border-style: solid;
+    background-color: white;
+}
+
+div.grid-container{
+    background-color: blue;
+}
+
+a:link, a:visited{color: blue; text-decoration: none;}
+a:hover{color: green; text-decoration: none;}

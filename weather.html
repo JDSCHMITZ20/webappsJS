@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather: Maryville</title>
+</head>
+
+<body>
+    <script>
+        const Weathe = document.getElementById('resultWeather');
+        document.write(getWeather().message);
+        function getWeather() {
+            $(document).ready(function () {
+                $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip=64468,us", function (result) {
+                    let message = ("Weather: " + result.weather[0].main);
+                    $('resultWeather').write(message);
+                });
+            });
+        }
+
+    </script>
+
+    <firstDay>
+        <h1> Currently</h1>
+        <p id="resultWeather"> Weather here </p>
+
+    </firstDay>
+
+
+</body>
+
+</html>
